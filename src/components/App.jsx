@@ -1,11 +1,11 @@
-import { RecipeList } from "./RecipeList";
-import {Recipe} from "./Recipe"
-import recipes from "./recipes.json";
+import {Profile} from "./Profile/Profile"
+import user from "../components/user.json"
+
 
 export const App = () => {
   return (
     <div>
-      <RecipeList recipes={recipes} />
+      <Profile user={user}/>
     </div>
   );
 };
