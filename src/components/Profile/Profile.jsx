@@ -1,29 +1,41 @@
+import css from "./Profile.module.css"
+import PropTypes from "prop-types"
 
 
-export const Profile = ({user:{username,tag,location,avatar,stats:{followers,views,likes}}})=><div class="profile">
-  <div class="description">
+export const Profile = ({user:{username,tag,location,avatar,stats:{followers,views,likes}}})=><div className={css.profile}>
+  <div className={css.description}>
     <img
       src={avatar}
       alt={username}
-      class="avatar"
+      className={css.avatar}
     />
-    <p class="name">{username}</p>
-    <p class="tag">{tag}</p>
-    <p class="location">{location}</p>
+    <p className={css.name}>{username}</p>
+    <p className={css.tag}>{tag}</p>
+    <p className={css.location}>{location}</p>
   </div>
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">{followers}</span>
+  <ul className={css.stats}>
+    <li className={css.stats__item}>
+      <span className={css.label}>Followers</span>
+      <span className={css.quantity}>{followers}</span>
     </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">{views}</span>
+    <li className={css.stats__item}>
+      <span className={css.label}>Views</span>
+      <span className={css.quantity}>{views}</span>
     </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">{likes}</span>
+    <li className={css.stats__item}>
+      <span className={css.label}>Likes</span>
+      <span className={css.quantity}>{likes}</span>
     </li>
   </ul>
 </div>
+
+Profile.propTypes={
+    username:PropTypes.string,
+    tag:PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.arrayOf(PropTypes.exact({
+    followers:PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired}))
+}
