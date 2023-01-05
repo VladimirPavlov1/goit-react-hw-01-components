@@ -1,34 +1,35 @@
-import css from "./Profile.module.css"
 import PropTypes from "prop-types"
+import { Container,Mail,Name,UserPhoto,Location,Stats,Item,UserWrapper, TabTitle, TabQuantity } from "./Profile.styled";
 
 
-export const Profile = ({user:{username,tag,location,avatar,stats:{followers,views,likes}}})=><div className={css.profile}>
-  <div className={css.description}>
-    <img
+
+export const Profile = ({user:{username,tag,location,avatar,stats:{followers,views,likes}}})=><Container>
+  <UserWrapper>
+    <UserPhoto
       src={avatar}
       alt={username}
-      className={css.avatar}
+      
     />
-    <p className={css.name}>{username}</p>
-    <p className={css.tag}>{tag}</p>
-    <p className={css.location}>{location}</p>
-  </div>
+    <Name>{username}</Name>
+    <Mail>{tag}</Mail>
+    <Location>{location}</Location>
+  </UserWrapper>
 
-  <ul className={css.stats}>
-    <li className={css.stats__item}>
-      <span className={css.label}>Followers</span>
-      <span className={css.quantity}>{followers}</span>
-    </li>
-    <li className={css.stats__item}>
-      <span className={css.label}>Views</span>
-      <span className={css.quantity}>{views}</span>
-    </li>
-    <li className={css.stats__item}>
-      <span className={css.label}>Likes</span>
-      <span className={css.quantity}>{likes}</span>
-    </li>
-  </ul>
-</div>
+  <Stats>
+    <Item>
+      <TabTitle>Followers</TabTitle>
+      <TabQuantity>{followers}</TabQuantity>
+    </Item>
+    <Item>
+      <TabTitle>Views</TabTitle>
+      <TabQuantity>{views}</TabQuantity>
+    </Item>
+    <Item>
+      <TabTitle>Likes</TabTitle>
+      <TabQuantity>{likes}</TabQuantity>
+    </Item>
+  </Stats>
+</Container>
 
 Profile.propTypes={
     username:PropTypes.string,
