@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/VladimirPavlov1/goit-react-hw-01-components/static/css/main.6922f15d.css",
-    "main.js": "/VladimirPavlov1/goit-react-hw-01-components/static/js/main.bfce1b32.js",
+    "main.css": "/VladimirPavlov1/goit-react-hw-01-components/static/css/main.8cb47287.css",
+    "main.js": "/VladimirPavlov1/goit-react-hw-01-components/static/js/main.5e7c16aa.js",
     "index.html": "/VladimirPavlov1/goit-react-hw-01-components/index.html",
-    "main.6922f15d.css.map": "/VladimirPavlov1/goit-react-hw-01-components/static/css/main.6922f15d.css.map",
-    "main.bfce1b32.js.map": "/VladimirPavlov1/goit-react-hw-01-components/static/js/main.bfce1b32.js.map"
+    "main.8cb47287.css.map": "/VladimirPavlov1/goit-react-hw-01-components/static/css/main.8cb47287.css.map",
+    "main.5e7c16aa.js.map": "/VladimirPavlov1/goit-react-hw-01-components/static/js/main.5e7c16aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.6922f15d.css",
-    "static/js/main.bfce1b32.js"
+    "static/css/main.8cb47287.css",
+    "static/js/main.5e7c16aa.js"
   ]
 }
