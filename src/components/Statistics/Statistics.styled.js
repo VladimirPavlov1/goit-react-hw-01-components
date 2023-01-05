@@ -15,10 +15,11 @@ export const StatList = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+    list-style:none;
 `;
 
 export const Item = styled.li`
-    background-color:${colorGenerator};`
+    background-color:${colorGenerator};`;
 
 export const TabTitle = styled.span`
     display: block;

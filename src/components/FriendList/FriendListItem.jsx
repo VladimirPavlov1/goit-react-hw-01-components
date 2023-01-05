@@ -1,4 +1,4 @@
-import css from "./FriendList.module.css"
+
 import { PropTypes } from "prop-types"
 import { UserStatus,Avatar, UserName } from "./FriendListItem.styled"
 

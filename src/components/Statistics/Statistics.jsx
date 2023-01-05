@@ -1,10 +1,11 @@
 import PropTypes from "prop-types" 
+
 import { Section, Title,StatList,Item, TabTitle, Percentage } from "./Statistics.styled";
 
 
 
 export const Statistics=({title,stats})=>{ 
-
+  
   return <Section>
     <Title>{title&&title}</Title>
    

@@ -3,8 +3,10 @@ import { FriendListItem } from "./FriendListItem"
 import { Container,List,Item } from "./FriendList.styled"
 import {PropTypes} from "prop-types"
 
-
 export const FriendList=({friends})=>{
+
+    
+
 return <Container>
 <List>
     {friends.map(friend=>{
