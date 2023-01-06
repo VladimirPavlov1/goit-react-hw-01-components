@@ -4,7 +4,7 @@ import{Table, TableCell, TitleTable} from "./Transactions.styled"
 
 
 export const Transactions =({trans})=>{
-   console.log(trans)
+   
    return <section>
          <Table>
             <thead>
@@ -15,7 +15,7 @@ export const Transactions =({trans})=>{
               </tr>
             </thead>
         {trans.map(({id,type,amount,currency})=>{
-          console.log(id)
+          
            return <tbody key={id}>
               <tr>
                 <TableCell>{type}</TableCell>

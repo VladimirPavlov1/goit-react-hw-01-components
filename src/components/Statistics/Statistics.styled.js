@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { colorGenerator } from 'utills';
+
 
 export const Section = styled.section`
    display:block;

@@ -11,7 +11,7 @@ export const Profile = ({user:{username,tag,location,avatar,stats:{followers,vie
       
     />
     <Name>{username}</Name>
-    <Mail>{tag}</Mail>
+    <Mail>@{tag}</Mail>
     <Location>{location}</Location>
   </UserWrapper>
 

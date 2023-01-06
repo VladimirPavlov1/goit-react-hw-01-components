@@ -7,9 +7,9 @@ import { Section, Title,StatList,Item, TabTitle, Percentage } from "./Statistics
 
 
 export const Statistics=({title,stats})=>{ 
-  const color ={background:colorGenerator}
+  const color ={background:colorGenerator()}
   return <Section>
-    <Title>{title&&title}</Title>
+    {title&&<Title>{title}</Title>}
    
      <StatList>
         {stats.map(({id,label,percentage})=>{
