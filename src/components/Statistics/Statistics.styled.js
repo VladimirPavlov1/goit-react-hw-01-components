@@ -19,7 +19,7 @@ export const StatList = styled.ul`
 `;
 
 export const Item = styled.li`
-    background-color:${colorGenerator};`;
+    color:grey;`;
 
 export const TabTitle = styled.span`
     display: block;

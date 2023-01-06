@@ -1,17 +1,19 @@
 import PropTypes from "prop-types" 
+import React from "react";
+import { colorGenerator } from "utills";
 
 import { Section, Title,StatList,Item, TabTitle, Percentage } from "./Statistics.styled";
 
 
 
 export const Statistics=({title,stats})=>{ 
-  
+  const color ={background:colorGenerator}
   return <Section>
     <Title>{title&&title}</Title>
    
      <StatList>
         {stats.map(({id,label,percentage})=>{
-            return <Item key={id}>
+            return <Item key={id} style={color}>
             <TabTitle>{label}</TabTitle>
             <Percentage>{percentage}</Percentage>
           </Item>

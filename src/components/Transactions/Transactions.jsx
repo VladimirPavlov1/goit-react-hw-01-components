@@ -1,4 +1,7 @@
+import {PropTypes} from "prop-types"
 import{Table, TableCell, TitleTable} from "./Transactions.styled"
+
+
 
 export const Transactions =({trans})=>{
    return <section>
@@ -27,4 +30,11 @@ export const Transactions =({trans})=>{
    </section>
    
     
+}
+
+Transactions.propTypes={
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 }
