@@ -1,32 +1,30 @@
-import{Table} from "./Transactions.styled"
+import{Table, TableCell, TitleTable} from "./Transactions.styled"
 
 export const Transactions =({trans})=>{
-   
-    return <Table>
+   return <section>
+         <Table>
             <thead>
               <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
+                <TitleTable>Type</TitleTable>
+                <TitleTable>Amount</TitleTable>
+                <TitleTable>Currency</TitleTable>
               </tr>
             </thead>
         {trans.map(({id,type,amount,currency})=>{
          
            return <tbody key={id}>
               <tr>
-                <td>{type}</td>
-                <td>{amount}</td>
-                <td>{currency}</td>
+                <TableCell>{type}</TableCell>
+                <TableCell>{amount}</TableCell>
+                <TableCell>{currency}</TableCell>
               </tr>
-              <tr>
-                <td>{type}</td>
-                <td>{amount}</td>
-                <td>{currency}</td>
-              </tr>
+                             
             </tbody>
             
           
         })}
         </Table>
+   </section>
+   
     
 }
