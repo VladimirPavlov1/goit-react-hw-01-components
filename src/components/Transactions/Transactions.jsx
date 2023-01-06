@@ -4,6 +4,7 @@ import{Table, TableCell, TitleTable} from "./Transactions.styled"
 
 
 export const Transactions =({trans})=>{
+   console.log(trans)
    return <section>
          <Table>
             <thead>
@@ -14,7 +15,7 @@ export const Transactions =({trans})=>{
               </tr>
             </thead>
         {trans.map(({id,type,amount,currency})=>{
-         
+          console.log(id)
            return <tbody key={id}>
               <tr>
                 <TableCell>{type}</TableCell>
@@ -33,8 +34,10 @@ export const Transactions =({trans})=>{
 }
 
 Transactions.propTypes={
+  trans:PropTypes.arrayOf(
+  PropTypes.exact({
   id: PropTypes.string,
     type: PropTypes.string,
     amount: PropTypes.string,
-    currency: PropTypes.string
-}
+    currency: PropTypes.string}).isRequired
+)}
