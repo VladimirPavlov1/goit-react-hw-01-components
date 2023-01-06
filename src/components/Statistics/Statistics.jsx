@@ -7,13 +7,13 @@ import { Section, Title,StatList,Item, TabTitle, Percentage } from "./Statistics
 
 
 export const Statistics=({title,stats})=>{ 
-  const color ={background:colorGenerator()}
+
   return <Section>
     {title&&<Title>{title}</Title>}
    
      <StatList>
         {stats.map(({id,label,percentage})=>{
-            return <Item key={id} style={color}>
+            return <Item key={id} style={{backgroundColor:`${colorGenerator()}`}}>
             <TabTitle>{label}</TabTitle>
             <Percentage>{percentage}</Percentage>
           </Item>
